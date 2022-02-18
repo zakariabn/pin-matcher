@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pin matcher</title>
+
+  <!-- vanilla css link  -->
+  <link rel="stylesheet" href="./style/style.css">
+
+  <!-- google font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1 class="title">Pin Matcher</h1>
+  </header>
+
+  <main>
+    <section class="pin-match">
+      <div class="container">
+        <div class="pin-generator">
+          <div class="display" >
+            <h4 id="random-pin-display"></h4>
+          </div>
+          <button class="btn-pin-generator">Generate Pin</button>
+        </div>
+        
+        <div class="pin-verifier">
+          <div class="display" >
+            <h4 id="input-display"></h4>
+          </div>
+          <div class="keypad">
+            <button class="key" id="key-1">1</button>
+            <button class="key" id="key-2">2</button>
+            <button class="key" id="key-3">3</button>
+            <button class="key" id="key-4">4</button>
+            <button class="key" id="key-5">5</button>
+            <button class="key" id="key-6">6</button>
+            <button class="key" id="key-7">7</button>
+            <button class="key" id="key-8">8</button>
+            <button class="key" id="key-9">9</button>
+            <button class="key" id="key-x">x</button>
+            <button class="key" id="key-0">0</button>
+            <button class="key" id="key-=">xx</button>
+          </div>
+        </div>
+    </div>
+
+    <div class="check-btn-container">
+      <button class="check-btn" id="checker">Check</button>
+    </div>
+
+    <div class="message">
+      <h5 id= "remain-time"></h5>
+    </div>
+    </section>
+  </main>
+  <script src="./app/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+:root {
+ /* color  */
+  --bg-color: rgb(65, 70, 104);
+  --text-color: #f7f4a4;
+}
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+*, 
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: initial;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pin-match {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.container {
+  display: flex;
+
+}
+.pin-generator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(38, 38, 59);
+  padding: 1rem;
+  margin: 1rem;
+}
+.pin-generator .display {
+  width: 120px;
+  height: 50px;
+  margin-bottom: 3rem;
+  background-color: #685341;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ef99f5;
+}
+.pin-generator .display h4{
+  
+}
+
+.btn-pin-generator {
+  width: 150px;
+  height: 150px;
+  border-radius: 300px;
+  border: none;
+  font-weight: bolder;
+  font-size: 1rem;
+  color: var(--text-color);
+  background-color: #654168;
+  filter: drop-shadow(1px 4px 0px #774d7a);
+}
+.btn-pin-generator:hover {
+  cursor: pointer;
+}
+.btn-pin-generator:active {
+  filter: none;
+  transform: translateY(2px);
+}
+
+
+/* // pin verifier */
+.pin-verifier {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: rgb(38, 38, 59);
+  padding: 1rem;
+  margin: 1rem;
+}
+.pin-verifier .display {
+  width: 120px;
+  height: 50px;
+  margin-bottom: 3rem;
+  background-color: #685341;
+  align-self: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.pin-verifier .display {
+  overflow: hidden;
+  color: #ef99f5;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1.1rem;
+  row-gap: .5rem;
+  align-self: center;
+}
+.key {
+  padding: .7rem;
+  border-radius: 10px;
+  border: none;
+
+  
+  color: var(--text-color);
+  background-color: #654168;
+  filter: drop-shadow(1px 2px 0px #774d7a);
+}
+.key:hover {
+  cursor: pointer;
+
+}
+.key:active {
+  filter: none;
+  transform: translateY(2px);
+}
+
+/* //check btn */
+.check-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.check-btn {
+  padding: .5rem 2rem;
+  border-radius: 1rem;
+  border: none;
+  color: rgb(19, 62, 206);
+  font-weight: bolder;
+  background-color: rgb(243, 187, 4);
+  box-shadow: 1px 2px 1px rgb(170, 131, 2);
+}
+.check-btn:hover {
+  cursor: pointer;
+}
+.check-btn:active {
+  box-shadow: none;
+  transform: translateY(2px);
+}
+
+
+/* //message */
+
+.message {
+  display: flex;
+  justify-content: center;
+}
+.color-coral {
+  color: coral;
+}
+.color-red {
+  color: red;
+}
