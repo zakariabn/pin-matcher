@@ -7,24 +7,6 @@ let inputPin;
 let count = 0;
 
 // Getting pin from this function 
-/* function getPin () {
-  function getDigit () {
-    let digit = Math.round(Math.random()*9).toString();
-    return digit;
-  };
-
-  const pins = [];
-  for ( let i = 1; i < 5; i++) {
-    let digit = getDigit();
-    pins.push(digit);
-  }
-  
-  let pinNumber = '';
-  for (const pin of pins) {
-    pinNumber = pinNumber + pin;
-  }
-  return pinNumber;
-} */
 function getPin () {
   let pin = Math.round(Math.random()*9999).toString();
   if (pin.length === 4){
