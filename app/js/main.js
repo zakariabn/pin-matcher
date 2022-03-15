@@ -7,7 +7,7 @@ let inputPin;
 let count = 0;
 
 // Getting pin from this function 
-function getPin () {
+/* function getPin () {
   function getDigit () {
     let digit = Math.round(Math.random()*9).toString();
     return digit;
@@ -24,10 +24,24 @@ function getPin () {
     pinNumber = pinNumber + pin;
   }
   return pinNumber;
+} */
+function getPin () {
+  let pin = Math.round(Math.random()*9999).toString();
+  if (pin.length === 4){
+    return pin;
+  }
+  else {
+    return getPin(); 
+  }
 }
 
 
-  // showing pin in display 
+  // showing pin in display
+window.addEventListener ('load', () => {
+  pin = getPin();
+  randomPinDisplay.innerText = pin;
+});
+
 pinGenerateBtn.addEventListener('click', ()=>{
   pin = getPin();
   randomPinDisplay.innerText = pin;
@@ -79,7 +93,7 @@ checkBtn.addEventListener('click', ()=>{
   }
   else{
     checkBtn.style.backgroundColor = 'coral';
-    count = count + 1;
+    count++;
   }
   
 });
@@ -90,18 +104,24 @@ const remainTimeBox = document.querySelector('#remain-time');
 checkBtn.addEventListener('click', ()=>{
   if (pin === inputPin ) {
     remainTimeBox.innerText = 'success'
-    randomPinDisplay.value = '';
-    inputDisplay.value = '';
-    
+    randomPinDisplay.innerText = '';
+    inputDisplay.innerText = '';
+    display = '';
+    keyNumbers = [];
+    count = 0;
   }
+
   else if ( count < 4) {
     remainTimeBox.innerText = 'You have ' + (4 - count) + ' left'; 
   }
   else {
     remainTimeBox.className = "color-red";
-    remainTimeBox.innerText = "You are blocked";
+    remainTimeBox.innerText = `You have been blocked for 5 second`;
     checkBtn.setAttribute('disabled', true);
     checkBtn.style.backgroundColor = 'red';
+    setTimeout(()=>{
+      history.go(0);
+    },5000)
   }
 })
 
