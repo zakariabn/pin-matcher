@@ -91,10 +91,13 @@ checkBtn.addEventListener('click', ()=>{
     display = '';
     keyNumbers = [];
     count = 0;
+    setTimeout(()=>{
+      history.go(0);
+    },10000)
   }
 
   else if ( count < 4) {
-    remainTimeBox.innerText = 'You have ' + (4 - count) + ' left'; 
+    remainTimeBox.innerText = 'You have ' + (4 - count) + ' Attempt left'; 
   }
   else {
     remainTimeBox.className = "color-red";
